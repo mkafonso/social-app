@@ -16,8 +16,8 @@ const App = () => {
           headerShown: false,
         }}
       >
-        <Stack.Screen name="Home" component={SignIn} />
-        <Stack.Screen name="Notifications" component={SignUp} />
+        <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen name="SignUp" component={SignUp} />
       </Stack.Navigator>
     </NavigationContainer>
   );
