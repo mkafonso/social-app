@@ -6,7 +6,7 @@ const TextStyle = ({ ...props }) => {
 };
 
 const Text = styled.Text`
-  color: ${(props) => props.color ?? '#414959'};
+  color: ${(props) => props.color ?? '#262626'};
   margin: ${(props) => props.margin ?? 0};
   padding: ${(props) => props.padding ?? 0};
 

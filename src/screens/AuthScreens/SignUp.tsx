@@ -16,7 +16,7 @@ const SignUp = ({ navigation }) => {
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
-        <Text title semi center>
+        <Text title semi center color="#0095f6">
           Criar conta
         </Text>
 
@@ -74,7 +74,7 @@ const SignUp = ({ navigation }) => {
         <SignIn onPress={() => navigation.navigate('SignIn')}>
           <Text small center>
             Já tem conta?{' '}
-            <Text bold color="orange">
+            <Text bold color="#0095F6">
               Entrar
             </Text>
           </Text>
@@ -86,7 +86,7 @@ const SignUp = ({ navigation }) => {
 
 const Container = styled.SafeAreaView`
   flex: 1;
-  background: #e4e4e4;
+  background: #e7e7de;
   justify-content: center;
 `;
 
@@ -108,15 +108,16 @@ const AuthTitle = styled(Text)`
 const AuthField = styled.TextInput`
   border-bottom-color: #8e93a1;
   border-bottom-width: 0.5px;
-  height: 48px;
+  height: 45px;
+  color: #262626;
 `;
 
 const SignUpContainer = styled.TouchableOpacity`
   margin: 0 32px;
-  height: 40px;
+  height: 45px;
   align-items: center;
   justify-content: center;
-  background: orange;
+  background: #0095f6;
   border-radius: 4px;
 `;
 

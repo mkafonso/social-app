@@ -1,21 +1,29 @@
 import React, { useState } from 'react';
 import { KeyboardAvoidingView, Platform } from 'react-native';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components/native';
 
 // import components
 import Text from '../../components/Text';
 
+// import actions
+// import {} from '../../actions/user'
+
 const SignIn = ({ navigation }) => {
+  // states
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+
+  // redux
+  const dispatch = useDispatch();
 
   return (
     <Container>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
-        <Text title semi center>
+        <Text title semi center color="#0095f6">
           Bem-vindo
         </Text>
 
@@ -61,7 +69,7 @@ const SignIn = ({ navigation }) => {
         <SignUp onPress={() => navigation.navigate('SignUp')}>
           <Text small center>
             Novo por aqui?{' '}
-            <Text bold color="orange">
+            <Text bold color="#0095f6">
               Cadastro
             </Text>
           </Text>
@@ -73,7 +81,7 @@ const SignIn = ({ navigation }) => {
 
 const Container = styled.SafeAreaView`
   flex: 1;
-  background: #e4e4e4;
+  background: #e7e7de;
   justify-content: center;
 `;
 
@@ -95,15 +103,16 @@ const AuthTitle = styled(Text)`
 const AuthField = styled.TextInput`
   border-bottom-color: #8e93a1;
   border-bottom-width: 0.5px;
-  height: 48px;
+  height: 45px;
+  color: #262626;
 `;
 
 const SignInContainer = styled.TouchableOpacity`
   margin: 0 32px;
-  height: 40px;
+  height: 45px;
   align-items: center;
   justify-content: center;
-  background: orange;
+  background: #0095f6;
   border-radius: 4px;
 `;
 
